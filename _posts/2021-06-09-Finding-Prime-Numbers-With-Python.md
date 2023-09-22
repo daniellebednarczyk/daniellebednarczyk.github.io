@@ -145,7 +145,7 @@ print(f"There are {prime_count} prime numbers between 1 and {n}, the largest of 
 >>> There are 168 prime numbers between 1 and 1000, the largest of which is 997
 ```
 
-Nice!
+Awesome!
 
 The next thing to do would be to put it into a tidy function, which you can see below:
 
@@ -181,19 +181,19 @@ primes_finder(1000000)
 
 That is pretty cool!
 
-I hoped you enjoyed learning about Primes, and one way to search for them using Python.
+I hoped you enjoyed learning about primes, and one way to search for them using Python.
 
 ---
 
 ###### Important Note: Using pop() on a Set in Python
 
-In the real world - we would need to make a consideration around the pop() method when used on a Set as in some cases it can be a bit inconsistent.
+In the real world we would need to make a consideration around the pop() method when used on a Set as in some cases it can be a bit inconsistent.
 
 The pop() method will usually extract the lowest element of a Set. Sets however are, by definition, unordered. The items are stored internally with some order, but this internal order is determined by the hash code of the key (which is what allows retrieval to be so fast). 
 
 This hashing method means that we can't 100% rely on it successfully getting the lowest value. In very rare cases, the hash provides a value that is not the lowest.
 
-Even though here, we're just coding up something fun - it is most definitely a useful thing to note when using Sets and pop() in Python in the future!
+Here we're just coding up something fun, but it is certainly a useful thing to note when using Sets and pop() in Python in the future!
 
 The simplest solution to force the minimum value to be used is to replace the line...
 
@@ -210,6 +210,6 @@ number_range.remove(prime)
 
 ...where we firstly force the identification of the lowest number in the number_range into our prime variable, and following that we remove it.
 
-However, because we have to sort the list for each iteration of the loop in order to get the minimum value, it's slightly slower than what we saw with pop()!
+However, because we have to sort the list for each iteration of the loop in order to get the minimum value, it's slightly slower than what we saw with pop().
 
 
