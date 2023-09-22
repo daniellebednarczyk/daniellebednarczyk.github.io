@@ -9,7 +9,7 @@ In this post I am going to run through a function in Python that can quickly fin
 
 A Prime number is a number that can only be divided wholly by itself and 1. So, 7 is a prime number, because no other numbers apart from 7 or 1 divide cleanly into it. 8 is not a prime number, because even though 8 and 1 divide into it, 2 and 4 do as well.
 
-Let's get into it!
+Let's get started!
 
 ---
 
