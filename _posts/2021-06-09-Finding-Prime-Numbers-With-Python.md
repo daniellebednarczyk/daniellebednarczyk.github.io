@@ -21,13 +21,13 @@ n = 20
 
 Now let's create our list of numbers we will run through to check for primes. The smallest true Prime number is 2, so we want to start our list with 2 and end at our upper bound (which for now is 20). The range function in Python is not inclusive of the upper bound, so we use n+1.
 
-Instead of using a list, we're going to use a set.  The reason for this is that sets have some special functions that will allow us to efficiently eliminate non-primes during our search.  You'll see what I mean soon...
+Instead of using a list, we're going to use a set. Sets have some special functions that will allow us to efficiently eliminate non-primes during our search. You'll see what I mean soon...
 
 ```ruby
 number_range = set(range(2, n+1))
 ```
 
-Let's also create a place to store any primes we discover.  A list will be perfect for this.
+Let's also create a place to store any primes we discover.  A list is perfect for this.
 
 ```ruby
 primes_list = []
@@ -43,7 +43,7 @@ There is a method which will remove an element from a list or set and provide th
 print(number_range)
 >>> {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 ```
-If we use *pop()* and assign this to the object called **prime**, it will *pop* the first element from the set out of **number_range**, and into **prime**
+If we use *pop()* and assign this to an object we'll call **prime**, it will *pop* the first element from the set out of **number_range**, and into **prime**
 
 ```ruby
 prime = number_range.pop()
@@ -63,7 +63,7 @@ print(primes_list)
 
 Now we're going to do a neat trick that will check our remaining number_range for non-primes, and allow us to eliminate them. For the prime number we just checked (in this first case it was the number 2), we want to generate all the multiples of that number up to our upper range (in our case, 20).
 
-We're going to again use a set rather than a list, because it allows us some special functionality that we'll use soon, which is the magic of this approach.
+We're going to again use a set rather than a list. A set allows us some special functionality that we'll use soon, which is the magic of this approach.
 
 ```ruby
 multiples = set(range(prime*2, n+1, prime))
