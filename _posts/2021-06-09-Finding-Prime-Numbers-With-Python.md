@@ -37,13 +37,13 @@ We're going to end up using a while loop to iterate through our list and check f
 
 So, we have our set of numbers (called number_range) to check all integers between 2 and 20. Let's extract the first number from that set so we can start checking if it is a prime. If it is, we're going to add it to our list called primes_list. If it is not a prime, we don't want to keep it.
 
-There is a method which will remove an element from a list or set and provide that value to us, and that method is called *pop*
+There is a method which will remove an element from a list or set and provide that value to us, and that method is called *pop()*
 
 ```ruby
 print(number_range)
 >>> {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 ```
-If we use pop, and assign this to the object called **prime** it will *pop* the first element from the set out of **number_range**, and into **prime**
+If we use *pop()* and assign this to the object called **prime**, it will *pop* the first element from the set out of **number_range**, and into **prime**
 
 ```ruby
 prime = number_range.pop()
@@ -53,7 +53,7 @@ print(number_range)
 >>> {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 ```
 
-Now, we know that the very first value in our range is going to be a prime...as there is nothing smaller than it so therefore nothing else could possible divide evenly into it.  As we know it's a prime, let's add it to our list of primes...
+We know that the very first value in our range is 2 and that it is going to be a prime. So, let's add it to our list of primes.
 
 ```ruby
 primes_list.append(prime)
@@ -61,7 +61,7 @@ print(primes_list)
 >>> [2]
 ```
 
-Now we're going to do a special trick to check our remaining number_range for non-primes. For the prime number we just checked (in this first case it was the number 2) we want to generate all the multiples of that up to our upper range (in our case, 20).
+Now we're going to do a neat trick that will check our remaining number_range for non-primes, and allow us to eliminate them. For the prime number we just checked (in this first case it was the number 2), we want to generate all the multiples of that number up to our upper range (in our case, 20).
 
 We're going to again use a set rather than a list, because it allows us some special functionality that we'll use soon, which is the magic of this approach.
 
