@@ -19,7 +19,7 @@ First, let's start by setting up a variable that will act as our upper limit of 
 n = 20
 ```
 
-Now let's create our list of numbers we will run through to check for primes. The smallest true Prime number is 2, so we want to start our list with 2 and end at our upper bound (which for now is 20). The range function in Python is not inclusive of the upper bound, so we use n+1.
+Now let's create our list of numbers we will run through to check for primes. The smallest true Prime number is 2, so we want to start our list with 2 and end at our upper bound (which for now is 20). The range function in Python takes the arguments (start, stop, step), and is not inclusive of the upper bound (stop). If we used our number n, Python would create a range that concluded at n-1. So we use n+1 to make sure our upper bound includes n.
 
 Instead of using a list, we're going to use a set. Sets have some special functions that will allow us to efficiently eliminate non-primes during our search. You'll see what I mean soon...
 
@@ -53,7 +53,7 @@ print(number_range)
 >>> {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 ```
 
-We know that the very first value in our range is 2 and that it is going to be a prime. So, let's add it to our list of primes.
+We know that the very first value in our range is 2, and that it is going to be a prime. So, let's add it to our list of primes.
 
 ```ruby
 primes_list.append(prime)
@@ -61,19 +61,19 @@ print(primes_list)
 >>> [2]
 ```
 
-Now we're going to do a neat trick that will check our remaining number_range for non-primes, and allow us to eliminate them. For the prime number we just checked (in this first case it was the number 2), we want to generate all the multiples of that number up to our upper range (in our case, 20).
+Now we're going to do a neat trick that will check our remaining number_range for non-primes, and allow us to eliminate them. For the prime number we just checked (in this first case it was the number 2), we want to generate all the multiples of that number up to our upper range (in our case, 20). These multiples by definition cannot be prime numbers, because they are wholly divisible by more combinations than themselves and 1.
 
-We're going to again use a set rather than a list. A set allows us some special functionality that we'll use soon, which is the magic of this approach.
+We're going to again use a set rather than a list. A set allows us some special functionality that we'll use soon, which is the neat part of this approach.
 
 ```ruby
 multiples = set(range(prime*2, n+1, prime))
 ```
 
-Remember that when created a range the syntax is range(start, stop, step). For the starting point - we don't need our number as that has already been added as a prime, so let's start our range of multiples at 2 * our number as that is the first multiple, in our case, our number is 2 so the first multiple will be 4. If the number we were checking was 3 then the first multiple would be 6 - and so on.
+Remember when we create a range the syntax is range(start, stop, step). For the starting point, we don't need our number as that has already been added as a prime, so let's *start* our range of multiples at 2 * our number. In our case here our number is 2, so the first multiple will be 4. If the number we were checking was 3 then the first multiple would be 6 - and so on.
 
-For the stopping point of our range - we specify that we want our range to go up to 20, so we use n+1 to specify that we want 20 to be included.
+For the *stop* point of our range - we specify that we want our range to go up to 20, so we use n+1 to specify that we want 20 to be included.
 
-Now, the **step** is key here.  We want multiples of our number, so we want to increment in steps *of our* number so we can put in **prime** here
+Now, the **step** is key here. We want multiples of our number, which means we want to increment in steps *of our* number, so we use **prime** here
 
 Lets have a look at our list of multiples...
 
@@ -82,7 +82,7 @@ print(multiples)
 >>> {4, 6, 8, 10, 12, 14, 16, 18, 20}
 ```
 
-The next part is the magic I spoke about earlier, we're using the special set functionality **difference_update** which removes any values from our number range that are multiples of the number we just checked. The reason we're doing this is because if a number is a multiple of anything other than 1 or itself then it is **not a prime number** and can remove it from the list to be checked.
+The next part is the coolest bit - we're using the special set functionality **difference_update**, which removes any values from our number range that are multiples of the number we just checked. The reason we're doing this is because if a number is a multiple of anything other than 1 or itself then it is **not a prime number**, and we can remove it from the list to be checked.
 
 Before we apply the **difference_update**, let's look at our two sets.
 
@@ -94,9 +94,9 @@ print(multiples)
 >>> {4, 6, 8, 10, 12, 14, 16, 18, 20}
 ```
 
-**difference_update** works in a way that will update one set to only include the values that are *different* from those in a second set
+**difference_update** works in a way that will update one set to only include the values that are *different* from those in a second set.
 
-To use this, we put our initial set and then apply the difference update with our multiples
+To use this, we call **difference_update** on our **number_range**, and pass it our set of **multiples**. This will keep everything in **number_range** that is not in **multiples**, essentially eliminating our known non-primes from our **number_range**.
 
 ```ruby
 number_range.difference_update(multiples)
