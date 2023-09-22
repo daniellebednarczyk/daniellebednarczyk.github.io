@@ -104,13 +104,11 @@ print(number_range)
 >>> {3, 5, 7, 9, 11, 13, 15, 17, 19}
 ```
 
-When we look at our number range now, all values that were also present in the multiples set have been removed as we *know* they were not primes
+When we look at our number range now, all values that were also present in the multiples set have been removed as we *know* they were not primes.
 
-This is amazing!  We've made a massive reduction to the pool of numbers that need to be tested so this is really efficient. It also means the smallest number in our range *is a prime number* as we know nothing smaller than it divides into it...and this means we can run all that logic again from the top!
+This is amazing! We've made a massive reduction to the pool of numbers that need to be tested, so this is really efficient. It also means the smallest number in our range *is a prime number*, as we know nothing smaller than it divides into it...and this means we can run all that logic again from the top!
 
-Whenever you can run sometime over and over again, a while loop is often a good solution.
-
-Here is the code, with a while loop doing the hard work of updated the number list and extracting primes until the list is empty.
+A while loop is a great way to run this process through our **number_range**. We can have it do the heavy lifting of updating the number list and extracting primes until the list is empty.
 
 Let's run it for any primes below 1000...
 
@@ -138,7 +136,7 @@ print(primes_list)
 >>> [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997]
 ```
 
-Let's now get some interesting stats from our list which we can use to summarise our findings, the number of primes that were found, and the largest prime in the list!
+Let's now get some interesting stats from our list which we can use to summarize our findings, the number of primes that were found, and the largest prime in the list:
 
 ```ruby
 prime_count = len(primes_list)
@@ -147,9 +145,9 @@ print(f"There are {prime_count} prime numbers between 1 and {n}, the largest of 
 >>> There are 168 prime numbers between 1 and 1000, the largest of which is 997
 ```
 
-Amazing!
+Nice!
 
-The next thing to do would be to put it into a neat function, which you can see below:
+The next thing to do would be to put it into a tidy function, which you can see below:
 
 ```ruby
 def primes_finder(n):
