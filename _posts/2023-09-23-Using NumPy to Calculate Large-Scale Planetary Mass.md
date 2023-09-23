@@ -5,19 +5,18 @@ image: "/posts/planets.jpg"
 tags: [Python,NumPy]
 ---
 
-In this post I am going to run through a function in Python that can quickly find all the Prime numbers below a given value. For example, if we passed the function a value of 100, it would find all the prime numbers below 100.
-
-A Prime number is a number that can only be divided wholly by itself and 1. So, 7 is a prime number, because no other numbers apart from 7 or 1 divide cleanly into it. 8 is not a prime number, because even though 8 and 1 divide into it, 2 and 4 do as well.
-
-Let's do it!
+NumPy is a powerful linear algebra library in Python. Because it is used in a number of Python packages commonly used in data science and machine learning (such as Pandas, SciPy, Matplotlib, and Scikit-learn), NumPy is such a valuable tool to familiarize ourselves with! In this post, we will leverage NumPy's incredible efficiency performing operations on arrays to calculate the masses of **ONE MILLION** theoretical planets! That's a **MASSive** amount! And on that note...
 
 ---
 
-First, let's start by setting up a variable that will act as our upper limit of numbers we want to search through. We'll start small with 20, so we're essentially looking for all prime numbers that exist that are equal to or smaller than 20.
+First, let's use a NumPy array to store our planetary radius info. Before we jump into our million planets, let's start a little closer to home by computing the masses (in km) for the planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. (Sorry, Pluto - you will always be a planet in my heart).
 
-```ruby
-n = 20
+```python
+import numpy as np
+
+radii = np.array([2439.7, 6051.8, 6371, 3389.7, 69911, 58232, 25362, 24622])
 ```
+
 
 Now let's create our list of numbers we will run through to check for primes. The smallest true Prime number is 2, so we want to start our list with 2 and end at our upper bound (which for now is 20). The range function in Python takes the arguments (start, stop, step), and is not inclusive of the upper bound (stop). If we used our number n, Python would create a range that concluded at n-1. So we use n+1 to make sure our upper bound includes n.
 
