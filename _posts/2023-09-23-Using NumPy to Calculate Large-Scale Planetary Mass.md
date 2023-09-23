@@ -2,7 +2,7 @@
 layout: post
 title: Using NumPy to Calculate Large-Scale Planetary Mass
 image: "/posts/primes_image.jpeg"
-tags: [Python, Primes]
+tags: [Python,NumPy]
 ---
 
 In this post I am going to run through a function in Python that can quickly find all the Prime numbers below a given value. For example, if we passed the function a value of 100, it would find all the prime numbers below 100.
