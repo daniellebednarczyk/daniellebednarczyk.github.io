@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using NumPy to Calculate Large-Scale Planetary Mass
-image: "/posts/primes_image.jpeg"
+image: "/posts/planets.jpeg"
 tags: [Python,NumPy]
 ---
 
