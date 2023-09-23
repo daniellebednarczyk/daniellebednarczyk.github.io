@@ -22,7 +22,7 @@ avatar_image: /img/profile-cropped.jpg
 
 #-------------------------------
 # Contact links
-linkedln: "http://www.linkedln.com/in/daniellebednarczyk" # Add your linkedln handle
+linkedln: "http://www.linkedin.com/in/daniellebednarczyk" # Add your linkedln handle
 github: "https://github.com/daniellebednarczyk"  # Add your github handle
 
 paginate: 6
