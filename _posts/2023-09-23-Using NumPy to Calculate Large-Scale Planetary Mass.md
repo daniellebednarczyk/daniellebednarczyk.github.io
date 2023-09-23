@@ -16,7 +16,10 @@ import numpy as np
 
 radii = np.array([2439.7, 6051.8, 6371, 3389.7, 69911, 58232, 25362, 24622])
 ```
-Our formula for calculating volume is $4/3 * pi * radius^2$
+
+```math
+volume = 4/3 * pi * radius^2
+```
 
 ```ruby
 number_range = set(range(2, n+1))
