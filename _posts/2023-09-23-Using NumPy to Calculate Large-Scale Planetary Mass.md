@@ -16,11 +16,7 @@ import numpy as np
 
 radii = np.array([2439.7, 6051.8, 6371, 3389.7, 69911, 58232, 25362, 24622])
 ```
-
-
-Now let's create our list of numbers we will run through to check for primes. The smallest true Prime number is 2, so we want to start our list with 2 and end at our upper bound (which for now is 20). The range function in Python takes the arguments (start, stop, step), and is not inclusive of the upper bound (stop). If we used our number n, Python would create a range that concluded at n-1. So we use n+1 to make sure our upper bound includes n.
-
-Instead of using a list, we're going to use a set. Sets have some special functions that will allow us to efficiently eliminate non-primes during our search. You'll see what I mean soon...
+Our formula for calculating volume is 4/3 $\times$ $\pi$ $\times$ $radius^2$
 
 ```ruby
 number_range = set(range(2, n+1))
