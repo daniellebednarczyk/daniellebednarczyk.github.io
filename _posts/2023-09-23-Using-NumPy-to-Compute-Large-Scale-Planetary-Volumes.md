@@ -24,8 +24,15 @@ volume = 4/3 * pi * radius^3
 One approach we might take to solve this is use a loop. It's not the most efficient way, but we'll start there and see how much we can improve upon it using NumPy's capabilities. For this approach we'll make a list that we'll call **volumes_list** and append our calculated volumes to it.
 
 ```python
+volumes_list = []
 for r in radii:
   volumes_list.append(4/3 * np.pi * r**3)
+```
+We can see that our volumes
+
+```
+print(volumes_list)
+>>> [60827208742.48264, 928415345892.8655, 1083206916845.7535, 163144485780.68842, 1431281810739357.2, 827129915150897.5, 68334355695583.96, 62525703987420.89]
 ```
 
 ---
