@@ -66,7 +66,7 @@ print(radii)
 volumes = 4/3 * np.pi * radii**3
 ```
 
-```
+```ruby
 np.size(volumes)
 >>> 1000000
 print(volumes)
