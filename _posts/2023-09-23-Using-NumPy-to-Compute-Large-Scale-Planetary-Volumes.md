@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Using NumPy to Calculate Large-Scale Planetary Mass
+title: Using NumPy to Calculate Large-Scale Planetary Volumes
 image: "/posts/planets.jpg"
 tags: [Python,NumPy]
 ---
 
-NumPy is a powerful linear algebra library in Python. Because it is used in a number of Python packages commonly used in data science and machine learning (such as Pandas, SciPy, Matplotlib, and Scikit-learn), NumPy is such a valuable tool to familiarize ourselves with! In this post, we will leverage NumPy's incredible efficiency performing operations on arrays to calculate the masses of *ONE MILLION* theoretical planets! That's a **MASS**ive amount! (I'll show myself out...)
+NumPy is a powerful linear algebra library in Python. Because it is used in a number of Python packages commonly used in data science and machine learning (such as Pandas, SciPy, Matplotlib, and Scikit-learn), NumPy is such a valuable tool to familiarize ourselves with! In this post, we will leverage NumPy's incredible efficiency performing operations on arrays to calculate the masses of *ONE MILLION* theoretical planets! 
 
 ---
 
