@@ -84,7 +84,7 @@ def rad_calc():
         volumes[r] = 4/3 * np.pi * r**3
 t = timeit.timeit('rad_calc()', globals=globals(), number=loop)
 print(t / loop)
->>>
+>>> 1.268772032799985
 ```
 
 Now let's compare our NumPy vector operation:
