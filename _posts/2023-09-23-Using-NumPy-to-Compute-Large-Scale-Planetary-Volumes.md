@@ -21,12 +21,11 @@ radii = np.array([2439.7, 6051.8, 6371, 3389.7, 69911, 58232, 25362, 24622])
 ```math
 volume = 4/3 * pi * radius^3
 ```
-One approach we might take to solve this is use a loop. It's not the most efficient way, but we'll start there and see how much we can improve upon it using NumPy's capabilities.
+One approach we might take to solve this is use a loop. It's not the most efficient way, but we'll start there and see how much we can improve upon it using NumPy's capabilities. For this approach we'll make a list that we'll call **volumes_list** and append our calculated volumes to it.
 
 ```python
 for r in radii:
-  volumes[r] = 4/3 * np.pi * r**3
-radii = np.array([2439.7, 6051.8, 6371, 3389.7, 69911, 58232, 25362, 24622])
+  volumes_list.append(4/3 * np.pi * r**3)
 ```
 
 ---
