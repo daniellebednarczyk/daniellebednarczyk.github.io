@@ -62,6 +62,19 @@ print(radii)
 >>> [4923 7457 7669 ... 5805 2529 5252]
 ```
 
+```ruby
+volumes = 4/3 * np.pi * radii**3
+```
+
+```
+np.size(volumes)
+>>> 1000000
+print(volumes)
+>>> [-3.96094440e+09 -8.17465329e+09  2.91678988e+08 ... -8.17425859e+09
+ -4.20884318e+09 -4.86035823e+09]
+```
+
+
 
 
 ###### Key Take-Aways: Using NumPy to perform mathematical operations on vectors is far more efficient than looping!
