@@ -73,7 +73,26 @@ print(volumes)
 >>> [-3.96094440e+09 -8.17465329e+09  2.91678988e+08 ... -8.17425859e+09
  -4.20884318e+09 -4.86035823e+09]
 ```
+Let's time it!
 
+First, our loop:
+```ruby
+volumes_list = []
+loop = 1000
+def rad_calc():
+    for r in radii:
+        volumes[r] = 4/3 * np.pi * r**3
+t = timeit.timeit('rad_calc()', globals=globals(), number=loop)
+print(t / loop)
+>>>
+
+Now let's compare our NumPy vector operation:
+
+```ruby
+t = timeit.timeit('volumes = 4/3 * np.pi * radii**3', globals=globals(), number=loop)
+print(t / loop)
+>>> 0.0028975747000076807
+```
 
 
 
