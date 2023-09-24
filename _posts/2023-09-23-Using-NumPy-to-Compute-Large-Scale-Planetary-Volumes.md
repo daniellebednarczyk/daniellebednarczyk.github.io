@@ -85,6 +85,7 @@ def rad_calc():
 t = timeit.timeit('rad_calc()', globals=globals(), number=loop)
 print(t / loop)
 >>>
+```
 
 Now let's compare our NumPy vector operation:
 
@@ -93,7 +94,8 @@ t = timeit.timeit('volumes = 4/3 * np.pi * radii**3', globals=globals(), number=
 print(t / loop)
 >>> 0.0028975747000076807
 ```
-
+**WOW**! 
+Implications for business - resource management
 
 
 ###### Key Take-Aways: Using NumPy to perform mathematical operations on vectors is far more efficient than looping!
