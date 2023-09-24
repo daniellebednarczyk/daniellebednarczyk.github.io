@@ -39,14 +39,21 @@ Ok, that's a great starting point. But can we make this simpler with NumPy?
 ```ruby
 volumes_nparray = 4/3 * np.pi * radii**3
 ```
-We sure can! NumPy can accomplish the same result in one fell swoop! Let's make sure our volumes match up:
+We sure can! NumPy can accomplish the same result in *one fell swoop*! Let's make sure our volumes match up:
 
 ```ruby
 print(volumes_list)
 >>> [6.08272087e+10 9.28415346e+11 1.08320692e+12 1.63144486e+11
  1.43128181e+15 8.27129915e+14 6.83343557e+13 6.25257040e+13]
 ```
-Same results (just with a different notation)!
+Same result, just with a different notation. Awesome!
+
+Ok, time to put it to the test with our million planets. We can use NumPy's **random.randint()** to create some hypothetical planetary radii for us to use. The randint() function in NumPy takes the arguments (low, high, size), and creates *size* number of random elements ranging between *low* and *high*. Here we are creating one million random integers between 1000 and 10,000 to represent our planets' radii:
+
+```ruby
+radii = np.random.randint(1000, 10000, 1000000)
+```
+
 
 
 
