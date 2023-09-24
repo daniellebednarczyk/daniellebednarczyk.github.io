@@ -38,7 +38,7 @@ Ok, that's a great starting point. But can we make this simpler with NumPy?
 
 ```ruby
 volumes_nparray = 4/3 * np.pi * radii**3
----
+```
 We sure can! NumPy can accomplish the same result in one fell swoop! Let's make sure our volumes match up:
 
 ```ruby
