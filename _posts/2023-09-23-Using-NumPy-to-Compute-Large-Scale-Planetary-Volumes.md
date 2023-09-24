@@ -54,6 +54,13 @@ Ok, time to put it to the test with our million planets. We can use NumPy's **ra
 radii = np.random.randint(1000, 10000, 1000000)
 ```
 
+```ruby
+np.size(radii)
+>>> 1000000
+
+print(radii)
+>>> [4923 7457 7669 ... 5805 2529 5252]
+```
 
 
 
