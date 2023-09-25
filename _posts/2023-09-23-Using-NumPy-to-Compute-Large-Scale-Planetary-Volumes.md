@@ -39,7 +39,7 @@ Ok, that's a great starting point. But can we make this simpler with NumPy?
 ```ruby
 volumes_nparray = 4/3 * np.pi * radii**3
 ```
-We sure can! NumPy can accomplish the same result in *one fell swoop*! Let's make sure our volumes match up:
+We sure can! NumPy can accomplish the same result in *one fell swoop*! We simply plug in our NumPy array for our value of radius in our equation. NumPy will apply the calculation to EACH value in our array. Let's make sure our volumes match up:
 
 ```ruby
 print(volumes_list)
@@ -54,6 +54,8 @@ Ok, time to put it to the test with our million planets. We can use NumPy's **ra
 radii = np.random.randint(1000, 10000, 1000000)
 ```
 
+Let's confirm we do in fact have one million entries, and take a peek at some of the values to see what they look like:
+
 ```ruby
 np.size(radii)
 >>> 1000000
@@ -62,9 +64,12 @@ print(radii)
 >>> [4923 7457 7669 ... 5805 2529 5252]
 ```
 
+Looking good! Ok, the moment of truth... 
+
 ```ruby
 volumes = 4/3 * np.pi * radii**3
 ```
+The calculation completes so quickly, I want to double-check the size and values of our *volumes* array to make sure it everything was actually computed!
 
 ```ruby
 np.size(volumes)
@@ -73,6 +78,8 @@ print(volumes)
 >>> [-3.96094440e+09 -8.17465329e+09  2.91678988e+08 ... -8.17425859e+09
  -4.20884318e+09 -4.86035823e+09]
 ```
+
+
 Let's time it!
 
 First, our loop:
