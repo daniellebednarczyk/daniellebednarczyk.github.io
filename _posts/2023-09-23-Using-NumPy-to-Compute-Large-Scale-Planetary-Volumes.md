@@ -123,20 +123,20 @@ print(print(t_loop / t_np)
 
 Sure, it's easy for me to get excited by this. After all, I am a data nerd that optimizes processes for fun. But, I hear you hypothetically asking, what actual benefit does this optimization bring to the table? And you are right to ask! 
 
-**Efficiency**: Speed matters in the business world. Faster computing procedures allow a business to process data and perform tasks much more quickly. This means faster decision-making, quicker response times to customer inquiries, and a more efficient workflow.
+<span style="color:#f58506;font-weight:bold;">Efficiency</span>: Speed matters in the business world. Faster computing procedures allow a business to process data and perform tasks much more quickly. This means faster decision-making, quicker response times to customer inquiries, and a more efficient workflow.
 
-**Competitive Advantage**: In today's competitive landscape, being faster can be a significant competitive advantage. If our business can deliver products or services more quickly or analyze data faster than competitors, it can attract more customers and gain market share.
+<span style="color:#f58506;font-weight:bold;">Competitive Advantage</span>: In today's competitive landscape, being faster can be a significant competitive advantage. If our business can deliver products or services more quickly or analyze data faster than competitors, it can attract more customers and gain market share.
 
-**Cost Savings**: Faster procedures often require fewer computing resources and less energy. This can translate into cost savings for the business. Reduced computing time means lower cloud computing or server/resource costs, which can be especially important for businesses with large-scale data processing needs.
+<span style="color:#f58506;font-weight:bold;">Cost Savings</span>: Faster procedures often require fewer computing resources and less energy. This can translate into cost savings for the business. Reduced computing time means lower cloud computing or server/resource costs, which can be especially important for businesses with large-scale data processing needs.
 
-**Real-time Insights**: Speedy computations enable real-time data analysis. This is crucial for industries like finance, e-commerce, and logistics, where timely insights can lead to better investment decisions, personalized customer experiences, and optimized supply chain operations.
+<span style="color:#f58506;font-weight:bold;">Real-time Insights</span>: Speedy computations enable real-time data analysis. This is crucial for industries like finance, e-commerce, and logistics, where timely insights can lead to better investment decisions, personalized customer experiences, and optimized supply chain operations.
 
-**Scaling Possibilities**: Fast procedures are more scalable. As our business grows, we can handle larger volumes of data or transactions without a proportional increase in computing resources or time. This scalability is crucial for handling growth without a proportional increase in costs.
+<span style="color:#f58506;font-weight:bold;">Scaling Possibilities</span>: Fast procedures are more scalable. As our business grows, we can handle larger volumes of data or transactions without a proportional increase in computing resources or time. This scalability is crucial for handling growth without a proportional increase in costs.
 
-**Innovation and Productivity**: Faster computations free up time and resources for innovation. Our data scientists and analysts can spend less time waiting for results and more time exploring data, developing new algorithms, and finding creative solutions to business challenges.
+<span style="color:#f58506;font-weight:bold;">Innovation and Productivity</span>: Faster computations free up time and resources for innovation. Our data scientists and analysts can spend less time waiting for results and more time exploring data, developing new algorithms, and finding creative solutions to business challenges.
 
 ---
 
-<span style="color:#f58506;font-weight:bold;"> Key Take-Aways</span>: Using NumPy to perform mathematical operations on vectors is hundreds of times more efficient than looping. These sorts of optimizations can have tangible and profound advantages for businesses.
+<span style="color:#f58506;font-weight:bold;">Key Take-Aways</span>: Using NumPy to perform mathematical operations on vectors is hundreds of times more efficient than looping. These sorts of optimizations can have tangible and profound advantages for businesses.
 
 
