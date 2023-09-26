@@ -97,10 +97,14 @@ def rad_calc():
     for r in radii:
         volumes[r] = 4/3 * np.pi * r**3
 t = timeit.timeit('rad_calc()', globals=globals(), number=loop)
+```
+Our **t** value (time) is for the total amount of time it took to run the 1000 iterations of our code snippet. In order to get the time it takes for a single execution of computing our one million entries using a loop, we need to divid our total time by the number of times we executed the code (our **loop** variable, which in this case is 1000).
+
+```ruby
 print(t / loop)
 >>> 1.268772032799985
 ```
-
+So it takes 1.27
 Now let's compare our NumPy vector operation:
 
 ```ruby
