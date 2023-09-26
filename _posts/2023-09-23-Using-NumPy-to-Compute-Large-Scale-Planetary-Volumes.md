@@ -64,12 +64,12 @@ print(radii)
 >>> [4923 7457 7669 ... 5805 2529 5252]
 ```
 
-Looking good! Ok, the moment of truth... 
+Looking good! Ok, the moment of truth. Let's plug our NumPy array of one million radii into our equation for **r** (radius) again:
 
 ```ruby
 volumes = 4/3 * np.pi * radii**3
 ```
-The calculation completes so quickly, I want to double-check the size and values of our *volumes* array to make sure it everything was actually computed!
+The calculation completes so quickly, I want to double-check the size and values of our **volumes** array to make sure it everything was actually computed!
 
 ```ruby
 np.size(volumes)
@@ -78,9 +78,15 @@ print(volumes)
 >>> [-3.96094440e+09 -8.17465329e+09  2.91678988e+08 ... -8.17425859e+09
  -4.20884318e+09 -4.86035823e+09]
 ```
+And there they are! 
 
+NumPy is so much faster, I think it would be really interesting to time each method. That way we can also have a measurable metric with which to compare them, so you don't have to just take my word for it!
 
-Let's time it!
+I'm going to use the *timeit* library in Python. It enables us to time the execution of a snippet of code, and gives us the ability to run each process a designated number of times so we can get a more accurate idea of how long the process might typically take. For the sake of this experiment, I'm going to loop each process 1000 times. We'll make a variable called **loop** and set it to 1000. We can use this variable when we call our **timeit()** function on each code snippet.
+
+```ruby
+import timeit
+```
 
 First, our loop:
 ```ruby
@@ -105,6 +111,6 @@ print(t / loop)
 Implications for business - resource management
 
 
-###### Key Take-Aways: Using NumPy to perform mathematical operations on vectors is far more efficient than looping!
+###### Key Take-Aways: Using NumPy to perform mathematical operations on vectors is far more efficient than looping and conserves valuable resources!
 
 
