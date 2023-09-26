@@ -103,7 +103,7 @@ Our **t_loop** time value is for the total amount of time it took to run the 100
 
 ```ruby
 print(t_loop / i)
->>> 1.268772032799985
+>>> 1.2878372399951332
 ```
 So it takes  roughly 1.27 seconds to compute our million theoretical planetary volumes by iterating through our **radii** array and adding each volume to our **volumes** list.
 
@@ -112,9 +112,12 @@ We already know our NumPy vector operation is much faster. But **HOW** much fast
 ```ruby
 t_np = timeit.timeit('volumes = 4/3 * np.pi * radii**3', globals=globals(), number=loop)
 print(t_np / i)
->>> 0.0028975747000076807
+>>> 0.002873580000596121
+
+print(print(t_loop / t_np)
+>>> 448.1647421432404
 ```
-**WOW**! That is about **438 TIMES FASTER!!!**
+**WOW**! That is ** ALMOST 450 TIMES FASTER!!!**
 
 ---
 
