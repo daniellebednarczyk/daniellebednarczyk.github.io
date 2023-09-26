@@ -89,23 +89,27 @@ import timeit
 loop = 1000
 ```
 
-First, our loop:
+First, our loop. By putting our multiple lines of code that loop through our array and compute volume into a single function called **vol_calc(), we can call it as a single argument in the **timeit** method.
+
 ```ruby
 volumes_list = []
-loop = 1000
-def rad_calc():
+def vol_calc():
     for r in radii:
         volumes[r] = 4/3 * np.pi * r**3
-t = timeit.timeit('rad_calc()', globals=globals(), number=loop)
+t = timeit.timeit('vol_calc()', globals=globals(), number=loop)
 ```
-Our **t** value (time) is for the total amount of time it took to run the 1000 iterations of our code snippet. In order to get the time it takes for a single execution of computing our one million entries using a loop, we need to divid our total time by the number of times we executed the code (our **loop** variable, which in this case is 1000).
+
+Our **t** value (time) is for the total amount of time it took to run the 1000 iterations of our code snippet.
+
+In order to get the time it takes for a single execution of computing our one million entries using a loop, we need to divid our total time by the number of times we executed the code (our **loop** variable, which in this case is 1000).
 
 ```ruby
 print(t / loop)
 >>> 1.268772032799985
 ```
-So it takes 1.27
-Now let's compare our NumPy vector operation:
+So it takes  roughly 1.27 seconds to compute our million theoretical planetary volumes by iterating through our **radii** array and adding each volume to our **volumes** list.
+
+We know our NumPy vector operation is much faster. But **HOW** much faster? Let's find out!
 
 ```ruby
 t = timeit.timeit('volumes = 4/3 * np.pi * radii**3', globals=globals(), number=loop)
