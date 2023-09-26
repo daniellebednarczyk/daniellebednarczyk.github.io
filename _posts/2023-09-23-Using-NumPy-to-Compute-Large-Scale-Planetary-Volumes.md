@@ -137,6 +137,6 @@ Sure, it's easy for me to get excited by this. After all, I am a data nerd that 
 
 ---
 
-<span style="color:#f58506"> Portfolio ###### Key Take-Aways</span>: Using NumPy to perform mathematical operations on vectors is hundreds of times more efficient than looping. These sorts of optimizations can have tangible and profound advantages for businesses.
+###### <span style="color:#f58506"> Key Take-Aways</span>: Using NumPy to perform mathematical operations on vectors is hundreds of times more efficient than looping. These sorts of optimizations can have tangible and profound advantages for businesses.
 
 
