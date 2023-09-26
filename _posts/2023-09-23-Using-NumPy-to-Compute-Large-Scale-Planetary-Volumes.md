@@ -116,6 +116,8 @@ print(t_np / i)
 ```
 **WOW**! That is about **438 TIMES FASTER!!!**
 
+---
+
 Sure, it's easy for me to get excited by this. After all, I am a data nerd that optimizes processes for fun. But, I hear you hypothetically asking, what actual benefit does this optimization bring to the table? And you are right to ask! 
 
 **Efficiency**: Speed matters in the business world. Faster computing procedures allow a business to process data and perform tasks much more quickly. This means faster decision-making, quicker response times to customer inquiries, and a more efficient workflow.
@@ -130,6 +132,7 @@ Sure, it's easy for me to get excited by this. After all, I am a data nerd that 
 
 **Innovation and Productivity**: Faster computations free up time and resources for innovation. Our data scientists and analysts can spend less time waiting for results and more time exploring data, developing new algorithms, and finding creative solutions to business challenges.
 
+---
 
 ###### Key Take-Aways: Using NumPy to perform mathematical operations on vectors is hundreds of times more efficient than looping. These sorts of optimizations can have tangible and profound advantages for businesses.
 
