@@ -11,7 +11,7 @@ NumPy is a powerful linear algebra library in Python. Because it is used in a nu
 
 First, let's use a NumPy array to store our planetary radius info. Before we jump into our million planets, let's start a little closer to home by computing the volumes for the planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. (Sorry, Pluto - you will always be a planet in my heart...)
 
-```ruby
+```python
 import numpy as np
 
 # Store solar system planet radii (in kilometers)
@@ -84,8 +84,9 @@ NumPy is so much faster, I think it would be really interesting to time each met
 
 I'm going to use the *timeit* library in Python. It enables us to time the execution of a snippet of code, and gives us the ability to run each process a designated number of times so we can get a more accurate idea of how long the process might typically take. For the sake of this experiment, I'm going to loop each process 1000 times. We'll make a variable called **loop** and set it to 1000. We can use this variable when we call our **timeit()** function on each code snippet.
 
-```ruby
+```python
 import timeit
+loop = 1000
 ```
 
 First, our loop:
