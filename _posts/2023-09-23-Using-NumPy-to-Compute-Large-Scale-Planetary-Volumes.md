@@ -82,41 +82,40 @@ And there they are!
 
 NumPy is so much faster, I think it would be really interesting to time each method. That way we can also have a measurable metric with which to compare them, so you don't have to just take my word for it!
 
-I'm going to use the *timeit* library in Python. It enables us to time the execution of a snippet of code, and gives us the ability to run each process a designated number of times so we can get a more accurate idea of how long the process might typically take. For the sake of this experiment, I'm going to loop each process 1000 times. We'll make a variable called **loop** and set it to 1000. We can use this variable when we call our **timeit()** function on each code snippet.
+I'm going to use the *timeit* library in Python. It enables us to time the execution of a snippet of code, and gives us the ability to run each process a designated number of times so we can get a more accurate idea of how long the process might typically take. For the sake of this experiment, I'm going to loop each process 1000 times. We'll make a variable for our number of iterations called **i** and set it to 1000. We can use this variable when we call our **timeit()** function on each code snippet.
 
 ```python
 import timeit
-loop = 1000
+i = 1000
 ```
 
-First, our loop. By putting our multiple lines of code that loop through our array and compute volume into a single function called **vol_calc(), we can call it as a single argument in the **timeit** method.
+First, our loop. By putting our multiple lines of code that loop through our array and compute volume into a single function called **vol_calc()**, we can call it as a single argument in the **timeit** method. Let's call our loop time **t_loop** so we can compare it later on.
 
 ```ruby
 volumes_list = []
 def vol_calc():
     for r in radii:
         volumes[r] = 4/3 * np.pi * r**3
-t = timeit.timeit('vol_calc()', globals=globals(), number=loop)
+t_loop = timeit.timeit('vol_calc()', globals=globals(), number=i)
 ```
 
-Our **t** value (time) is for the total amount of time it took to run the 1000 iterations of our code snippet.
-
-In order to get the time it takes for a single execution of computing our one million entries using a loop, we need to divid our total time by the number of times we executed the code (our **loop** variable, which in this case is 1000).
+Our **t_loop** time value is for the total amount of time it took to run the 1000 iterations of our code snippet. In order to get the time it takes for a single execution of computing our one million entries using a loop, we need to divid our total time by the number of times we executed the code (our **i** iterations variable, which in this case is 1000).
 
 ```ruby
-print(t / loop)
+print(t_loop / i)
 >>> 1.268772032799985
 ```
 So it takes  roughly 1.27 seconds to compute our million theoretical planetary volumes by iterating through our **radii** array and adding each volume to our **volumes** list.
 
-We know our NumPy vector operation is much faster. But **HOW** much faster? Let's find out!
+We already know our NumPy vector operation is much faster. But **HOW** much faster? Let's let **t_np** be the total time it takes to compute our one million volumes using a NumPy array operation in **i** iterations (which is still 1000).  
 
 ```ruby
-t = timeit.timeit('volumes = 4/3 * np.pi * radii**3', globals=globals(), number=loop)
-print(t / loop)
+t_np = timeit.timeit('volumes = 4/3 * np.pi * radii**3', globals=globals(), number=loop)
+print(t_np / i)
 >>> 0.0028975747000076807
 ```
-**WOW**! 
+**WOW**! That is about **438 TIMES FASTER!!!***
+
 Implications for business - resource management
 
 
