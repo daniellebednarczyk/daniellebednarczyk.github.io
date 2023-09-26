@@ -117,7 +117,7 @@ print(t_np / i)
 print(print(t_loop / t_np)
 >>> 448.1647421432404
 ```
-**WOW**! That is ** ALMOST 450 TIMES FASTER!!!**
+**WOW**! That is ***ALMOST 450 TIMES FASTER!!!***
 
 ---
 
