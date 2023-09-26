@@ -114,9 +114,10 @@ t_np = timeit.timeit('volumes = 4/3 * np.pi * radii**3', globals=globals(), numb
 print(t_np / i)
 >>> 0.0028975747000076807
 ```
-**WOW**! That is about **438 TIMES FASTER!!!***
+**WOW**! That is about **438 TIMES FASTER!!!**
 
-Implications for business - resource management
+Sure, it's easy for me to get excited by this. After all, I am a data nerd that optimizes processes for fun. But, I hear you hypothetically asking, why should you care that NumPy computes large-scale datasets hundreds of times faster than vanilla Python? And you'd be right to ask! 
+
 
 
 ###### Key Take-Aways: Using NumPy to perform mathematical operations on vectors is far more efficient than looping and conserves valuable resources!
