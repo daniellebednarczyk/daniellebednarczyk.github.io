@@ -90,10 +90,31 @@ plt.show()
 ```
 ![Fully cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_full_crop.png "Plot output of our fully cropped image")
 
-We'll come back to this image a little later and do some other fun stuff with it!
+We'll come back to this image a little later and do some other fun stuff with it! For now, let's save it:
+
+```ruby
+io.imsave("bdog_cropped.jpg", cropped)
+```
 
 ---
-In this next section let's explore 
+
+In this next section let's explore flipping or "mirroring" our image.
+
+We can use the *start, stop, step* notation when retrieving a dimension of our array. Using a *step* of -1 will reverse the order in which the elements are retrieved. Doing this to our first dimension will reverse the rows, but we will leave our columns and colour channels untouched.
+
+```ruby
+vertical_flip = bdog[::-1,:,:]
+show_image(vertical_flip)
+```
+![Fully cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_vertical_flip.png "Plot output of our fully cropped image")
+
+Of course we can flip it horizontally as well:
+
+```ruby
+horizontal_flip = bdog[:,::-1,:]
+show_image(horizontal_flip)
+```
+
 
 ---
 
