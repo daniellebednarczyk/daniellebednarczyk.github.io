@@ -56,14 +56,43 @@ def show_image(image):
     plt.imshow(image)
     plt.show()
 ```
+So now we can just call *show_image()* and pass it the NumPy array of our image: 
+```ruby
+show_image(bdog)
+```
+![Plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_plot.png "Plot output of our image")
+
 Let's see what we can do with this image using NumPy!
 
-First, let's crop it a little, so BomberDog and "his" Jeep are a little more prominant. We can slice our array to crop the image. Let's start by cropping just one axis, and see what we get:
+First, let's crop it a little, so BomberDog and "his" Jeep are a little more prominant. We can slice our array to crop the image. Let's start by cropping just one axis, and see what we get. **Note**: when we are slicing our array, using a colon **:** signifies to keep all values.
 
 ```ruby
 cropped = bdog[0:500,:,:]
 show_image(cropped) 
 ```
+![Partially cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_firt_crop.png "Plot output of our partially cropped image")
+
+Ok, we've confirmed that the first axis that we refer to in our slicing is the Y-axis. In other words, we've cropped vertically. Let's try cropping along the horizontal axis:
+
+```ruby
+cropped = bdog[:,450:1350,:]
+show_image(cropped)
+```
+![Partially cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_second_crop.png "Plot output of our partially cropped image")
+
+And we've confirmed that the second axis is cropping along the X-axis of our image. Now that we know what we have to do to crop along the X and Y axes of our image, let's try and crop out some of the background and finish getting our subjects framed. Remember that our third dimension is for our RGB values, and we don't want to mess around with those...for now...
+
+```ruby
+cropped = bdog[235:950,450:1350,:]
+plt.imshow(cropped)
+plt.show()
+```
+![Fully cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_sfull_crop.png "Plot output of our fully cropped image")
+
+
+
+
+
 
 ---
 
