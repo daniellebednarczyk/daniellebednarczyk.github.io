@@ -48,30 +48,25 @@ Now let's take a look at our image:
 plt.imshow(bdog)
 plt.show()
 ```
-![Dog dressed as militar dog sitting on hood of Jeep](/daniellebednarczyk.github.io/img/image_manipulation_with_numpy/bdog_plot.png)
+![Dog dressed as military dog sitting on hood of Jeep](/daniellebednarczyk.github.io/img/image_manipulation_with_numpy/bdog_plot.png)
 
+Since we're going to be viewing our image a lot as we go, I'm going to toss those two lines of code into a function so we only need to call one line of code each time. We'll pass the image we want shown as an argument, that way we can send any image we want to it.
+```python
+def show_image(image):
+    plt.imshow(image)
+    plt.show()
 ```
+Let's see what we can do with this image using NumPy!
+
+First, let's crop it a little, so BomberDog and "his" Jeep are a little more prominant. We can slice our array to crop the image. Let's start by cropping just one axis, and see what we get:
 
 ```ruby
-
->>> 
+cropped = bdog[0:500,:,:]
+show_image(cropped) 
 ```
 
 ---
 
-Sure, it's easy for me to get excited by this. After all, I am a data nerd that optimizes processes for fun. But, I hear you hypothetically asking, what actual benefit does this optimization bring to the table? And you are right to ask! 
-
-<span style="color:#f58506;font-weight:bold;">Efficiency</span>: Speed matters in the business world. Faster computing procedures allow a business to process data and perform tasks much more quickly. This means faster decision-making, quicker response times to customer inquiries, and a more efficient workflow.
-
-<span style="color:#f58506;font-weight:bold;">Competitive Advantage</span>: In today's competitive landscape, being faster can be a significant competitive advantage. If our business can deliver products or services more quickly or analyze data faster than competitors, it can attract more customers and gain market share.
-
-<span style="color:#f58506;font-weight:bold;">Cost Savings</span>: Faster procedures often require fewer computing resources and less energy. This can translate into cost savings for the business. Reduced computing time means lower cloud computing or server/resource costs, which can be especially important for businesses with large-scale data processing needs.
-
-<span style="color:#f58506;font-weight:bold;">Real-time Insights</span>: Speedy computations enable real-time data analysis. This is crucial for industries like finance, e-commerce, and logistics, where timely insights can lead to better investment decisions, personalized customer experiences, and optimized supply chain operations.
-
-<span style="color:#f58506;font-weight:bold;">Scaling Possibilities</span>: Fast procedures are more scalable. As our business grows, we can handle larger volumes of data or transactions without a proportional increase in computing resources or time. This scalability is crucial for handling growth without a proportional increase in costs.
-
-<span style="color:#f58506;font-weight:bold;">Innovation and Productivity</span>: Faster computations free up time and resources for innovation. Our data scientists and analysts can spend less time waiting for results and more time exploring data, developing new algorithms, and finding creative solutions to business challenges.
 
 ---
 
