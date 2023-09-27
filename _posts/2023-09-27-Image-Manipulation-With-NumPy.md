@@ -106,7 +106,7 @@ We can use the *start, stop, step* notation when retrieving a dimension of our a
 vertical_flip = bdog[::-1,:,:]
 show_image(vertical_flip)
 ```
-![Fully cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_vertical_flip.png "Plot output of our fully cropped image")
+![Vertically flipped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_vertical_flip.png "Plot output of our vertically flipped image")
 
 Of course we can flip it horizontally as well:
 
