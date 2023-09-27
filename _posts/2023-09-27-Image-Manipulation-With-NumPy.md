@@ -122,14 +122,22 @@ It's really cool to me that we have basically used array slicing to flip our ima
 
 ---
 
-Remember that RGB foreshadowing from earlier? It's finally time to get colourful!
+Remember that RGB foreshadowing from earlier? It's finally time to get colourful! For this section, let's use our cropped image we saved from earlier.
 
-We can extract a red, a blue, and a green image of our image by zero-ing out our other colour channels. Note, we don't want to crop the other channels out, just mute them by making them zero instead.
-we don't want to crop the other colour channels out, but make them zero instead
-easiest way to do this is to create an array of zeroes that is the same size as our image
-then fill only the red colour channel with the red values from the original image
-numpy gives us these capabilities
-we can use numpy zeroes to create our array of zeroes and we want it to be the same dimensions as our original image
-instead of manually inputting these values we can use the .shape attribute which will provide us those exact values
-want to make sure the data type of this array is equal to uint8, which is an unsigned 8 bit integer. this is the data
-type we often want when dealing with images in images
+```ruby
+bdog_cropped = io.imread("bdog_cropped.jpg")
+```
+
+We can extract a red, a blue, and a green image separately from our image by zero-ing out our other colour channels. Note, we don't want to crop the other channels out, just mute them by making them zero instead. The easiest way to do this is to create an array of zeroes that is the same size as our image. NumPy gives us this capability with *zeros()*, and we can use *.shape* on our **bdog_cropped** image object to make it the same dimensions as our original image, without having to manually input any values. We specify **uint8**, which is an unsigned 8 bit integer, as this is the datatype we often want when dealing with images.
+
+```ruby
+red = np.zeros(bdog_cropped.shape, dtype = "uint8")
+```
+
+Now let's fill only the red colour channel with the red values from the original image:
+
+```ruby
+red[:,:,0] = bdog_cropped[:,:,0]
+show_image(red)
+```
+![Red values only of a plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_red.png "Plot output of our horizontally flipped image")
