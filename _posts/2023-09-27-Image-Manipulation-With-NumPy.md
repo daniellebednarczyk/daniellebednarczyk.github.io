@@ -70,8 +70,8 @@ First, let's crop it a little, so BomberDog and "his" Jeep are a little more pro
 cropped = bdog[0:500,:,:]
 show_image(cropped) 
 ```
-![Partially cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_firt_crop.png "Plot output of our partially cropped image")
-
+![Partially cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_first_crop.png "Plot output of our partially cropped image")
+    
 Ok, we've confirmed that the first axis that we refer to in our slicing is the Y-axis. In other words, we've cropped vertically. Let's try cropping along the horizontal axis:
 
 ```ruby
