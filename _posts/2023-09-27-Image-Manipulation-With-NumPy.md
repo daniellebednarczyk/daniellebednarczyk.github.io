@@ -64,7 +64,8 @@ show_image(bdog)
 
 Let's see what we can do with this image using NumPy!
 
-First, let's crop it a little, so BomberDog and "his" Jeep are a little more prominant. We can slice our array to crop the image. Let's start by cropping just one axis, and see what we get. **Note**: when we are slicing our array, using a colon **:** signifies to keep all values.
+---
+In this first section let's get our feet wet doing some simple slicing on our image array. I'd like to crop it a little, so BomberDog and "his" Jeep are a little more prominant. We can slice our array to crop the image. Let's start by cropping just one axis, and see what we get. **Note**: when we are slicing our array, using a colon **:** signifies to keep all values.
 
 ```ruby
 cropped = bdog[0:500,:,:]
@@ -89,13 +90,10 @@ plt.show()
 ```
 ![Fully cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_full_crop.png "Plot output of our fully cropped image")
 
-
-
-
-
+We'll come back to this image a little later and do some other fun stuff with it!
 
 ---
-
+In this next section let's explore 
 
 ---
 
