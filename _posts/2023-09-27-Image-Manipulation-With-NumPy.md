@@ -48,7 +48,7 @@ Now let's take a look at our image:
 plt.imshow(bdog)
 plt.show()
 ```
-![Book logo](/least-github-pages/assets/logo.png)
+![Dog dressed as militar dog sitting on hood of Jeep](/daniellebednarczyk.github.io/img/image_manipulation_with_numpy/bdog_plot.png)
 
 ```
 
