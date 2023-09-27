@@ -114,7 +114,9 @@ Of course we can flip it horizontally as well:
 horizontal_flip = bdog[:,::-1,:]
 show_image(horizontal_flip)
 ```
+![Horizontally flipped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_horizontal_flip.png "Plot output of our horizontally flipped image")
 
+At first glance it might not look like it has been flipped, but notice that the LMTV (large military truck) is now on the right side of the image instead of the left.
 
 ---
 
