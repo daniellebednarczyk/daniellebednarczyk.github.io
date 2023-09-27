@@ -87,7 +87,7 @@ cropped = bdog[235:950,450:1350,:]
 plt.imshow(cropped)
 plt.show()
 ```
-![Fully cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_sfull_crop.png "Plot output of our fully cropped image")
+![Fully cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_full_crop.png "Plot output of our fully cropped image")
 
 
 
