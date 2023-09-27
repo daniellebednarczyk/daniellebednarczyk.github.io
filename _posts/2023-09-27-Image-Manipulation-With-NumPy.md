@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image Manipulation With NumPy
-image: "/posts/bdog_horizontal_rgb.jpg"
+image: "/posts/Bomber_Dog.jpg"
 tags: [Python, NumPy, Image Manipulation]
 ---
 
