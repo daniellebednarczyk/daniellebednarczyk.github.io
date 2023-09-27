@@ -18,6 +18,7 @@ We're going to need to import some libraries and modules to load and display our
 import numpy as np
 from skimage import io
 import matplotlib.pyplot as plt
+```
 
 A note about imports:
 Notice how we imported things a few different ways?
@@ -47,7 +48,7 @@ Now let's take a look at our image:
 plt.imshow(bdog)
 plt.show()
 ```
-
+![Book logo](/least-github-pages/assets/logo.png)
 
 ```
 
