@@ -48,7 +48,7 @@ Now let's take a look at our image:
 plt.imshow(bdog)
 plt.show()
 ```
-![Dog dressed as military dog sitting on hood of Jeep](/daniellebednarczyk.github.io/img/image_manipulation_with_numpy/bdog_plot.png)
+![alt text](/img/posts/image_manipulation_with_numpy/bdog_plot.png "Coffee & Python - I love them!")
 
 Since we're going to be viewing our image a lot as we go, I'm going to toss those two lines of code into a function so we only need to call one line of code each time. We'll pass the image we want shown as an argument, that way we can send any image we want to it.
 ```python
