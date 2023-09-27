@@ -81,7 +81,7 @@ show_image(cropped)
 ```
 ![Partially cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_second_crop.png "Plot output of our partially cropped image")
 
-And we've confirmed that the second axis is cropping along the X-axis of our image. Now that we know what we have to do to crop along the X and Y axes of our image, let's try and crop out some of the background and finish getting our subjects framed. Remember that our third dimension is for our RGB values, and we don't want to mess around with those...for now...
+And we've confirmed that the second axis is cropping along the X-axis of our image. Now that we know what we have to do to crop along the X and Y axes of our image, let's try and crop out some of the background and finish getting our subjects framed. Remember that our third dimension is for our RGB values, and we don't want to mess around with those...yet...
 
 ```ruby
 cropped = bdog[235:950,450:1350,:]
@@ -118,6 +118,18 @@ show_image(horizontal_flip)
 
 At first glance it might not look like it has been flipped, but notice that the LMTV (large military truck) is now on the right side of the image instead of the left.
 
+It's really cool to me that we have basically used array slicing to flip our image both vertically and horizontally!
+
 ---
 
+Remember that RGB foreshadowing from earlier? It's finally time to get colourful!
 
+We can extract a red, a blue, and a green image of our image by zero-ing out our other colour channels. Note, we don't want to crop the other channels out, just mute them by making them zero instead.
+we don't want to crop the other colour channels out, but make them zero instead
+easiest way to do this is to create an array of zeroes that is the same size as our image
+then fill only the red colour channel with the red values from the original image
+numpy gives us these capabilities
+we can use numpy zeroes to create our array of zeroes and we want it to be the same dimensions as our original image
+instead of manually inputting these values we can use the .shape attribute which will provide us those exact values
+want to make sure the data type of this array is equal to uint8, which is an unsigned 8 bit integer. this is the data
+type we often want when dealing with images in images
