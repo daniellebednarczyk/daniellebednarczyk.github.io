@@ -25,7 +25,7 @@ Notice how we imported things a few different ways?
 // TODO: Describe why using this as a reference: https://www.codingem.com/python-difference-between-import-and-from-import/
 
             
-I'm saving the image I want to work with to my working directory in Python, so we do not have to reference its full address when uploading.
+I'm saving the image I want to work with to my working directory in Python, so we do not have to reference its full address when uploading. Because I shamelessly capitalize on any opportunity to show off my adorable dog Bomber (aka BomberDog), I'm going to use one of my favourite photos of him looking too cool on top of "his" Jeep during one of our camping adventures.
 
 ```ruby
 bdog = io.imread("Bomber_Dog.jpg")
