@@ -28,10 +28,8 @@ tags: [Python, NumPy, Image Manipulation]
 ```
 
 ```ruby
-prime_count = len(primes_list)
-largest_prime = max(primes_list)
-print(f"There are {prime_count} prime numbers between 1 and {n}, the largest of which is {largest_prime}")
->>> There are 168 prime numbers between 1 and 1000, the largest of which is 997
+
+>>> 
 ```
 
 
