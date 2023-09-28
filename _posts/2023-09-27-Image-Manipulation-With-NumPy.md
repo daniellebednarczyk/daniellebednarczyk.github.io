@@ -140,4 +140,20 @@ Now let's fill only the red colour channel with the red values from the original
 red[:,:,0] = bdog_cropped[:,:,0]
 show_image(red)
 ```
-![Red values only of a plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_red.png "Plot output of our horizontally flipped image")
+![Red values only of a plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_red.png "Plot output of our image using only red values")
+
+And now blue and green:
+
+```ruby
+green = np.zeros(bdog_cropped.shape, dtype = "uint8")
+green[:,:,1] = bdog_cropped[:,:,1]
+show_image(green)
+```
+![Green values only of a plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_green.png "Plot output of our image using only green values")
+```ruby
+blue = np.zeros(bdog_cropped.shape, dtype = "uint8")
+blue[:,:,2] = bdog_cropped[:,:,2]
+show_image(blue)
+```
+![Green values only of a plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_green.png "Plot output of our image using only green values")
+
