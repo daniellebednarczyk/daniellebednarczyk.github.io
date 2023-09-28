@@ -157,6 +157,21 @@ blue = np.zeros(bdog_cropped.shape, dtype = "uint8")
 blue[:,:,2] = bdog_cropped[:,:,2]
 show_image(blue)
 ```
-![Green values only of a plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_green.png "Plot output of our image using only green values")
+![Green values only of a plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_blue.png "Plot output of our image using only blue values")
 
-This is so cool! We can use NumPy to manipulate the colour of our image. 
+Neat! Now that we've used NumPy to manipulate the colors of our image, let's take it a step further using NumPy's stacking ability to to horizontally stack our red, green, and blue images next to each other:
+
+```ruby
+bdog_horizontal_rgb = np.hstack((red_cropped, green_cropped, blue_cropped))
+show_image(bdog_horizontal_rgb)
+```
+![Horizontally stacked red, green, and blue plots of a Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_horizontal_rgb_plot.png "Plot output of our composite red, green, and blue images horizontally stacked")
+
+Looking good! Just one more step - let's save our composite image:
+```ruby
+io.imsave("bdog_horizontal_rgb.jpg", bdog_horizontal_rgb)
+```
+And here we are, the final product:
+![Composite horizontal stack of red, green, and blue images of a Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_horizontal_rgb.jpg "Final output of a VERY good boy in red, green, and blue")
+
+
