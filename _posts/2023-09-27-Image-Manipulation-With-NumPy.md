@@ -122,11 +122,13 @@ It's really cool to me that we have basically used array slicing to flip our ima
 
 ---
 
-Remember that RGB foreshadowing from earlier? It's finally time to get colourful! For this section, let's use our cropped image we saved from earlier.
+Remember that RGB foreshadowing from earlier? It's finally time to get colourful! For this section, let's use our cropped image we saved from earlier:
 
 ```ruby
 bdog_cropped = io.imread("bdog_cropped.jpg")
+show_image(bdog_cropped)
 ```
+![Fully cropped plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_full_crop.png "Plot output of our fully cropped image we created earlier")
 
 We can extract a red, a blue, and a green image separately from our image by zero-ing out our other colour channels. Note, we don't want to crop the other channels out, just mute them by making them zero instead. The easiest way to do this is to create an array of zeroes that is the same size as our image. NumPy gives us this capability with *zeros()*, and we can use *.shape* on our **bdog_cropped** image object to make it the same dimensions as our original image, without having to manually input any values. We specify **uint8**, which is an unsigned 8 bit integer, as this is the datatype we often want when dealing with images.
 
@@ -157,3 +159,4 @@ show_image(blue)
 ```
 ![Green values only of a plot of Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_green.png "Plot output of our image using only green values")
 
+This is so cool! We can use NumPy to manipulate the colour of our image. 
