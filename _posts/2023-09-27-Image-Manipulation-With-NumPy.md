@@ -174,4 +174,4 @@ io.imsave("bdog_horizontal_rgb.jpg", bdog_horizontal_rgb)
 And here we are, the final product:
 ![Composite horizontal stack of red, green, and blue images of a Dog on Jeep](/img/posts/image_manipulation_with_numpy/bdog_horizontal_rgb.jpg "Final output of a VERY good boy in red, green, and blue")
 
-
+Just when I thought BomberDog couldn't get any cooler!
