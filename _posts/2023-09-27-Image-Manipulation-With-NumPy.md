@@ -10,9 +10,6 @@ Let's have a little fun in this post and explore working with images in NumPy! T
 ---
 
 We're going to need to import some libraries and modules to load and display our images. The **io** package from the **skimage** library allows us to import an image. From the **Matplotlib** library we are going to import **pyplot** as plt, which is a fairly standard naming convention for that package.
-// TODO: make sure I used package/library/module properly there
-
-
 
 ```python
 import numpy as np
@@ -20,11 +17,6 @@ from skimage import io
 import matplotlib.pyplot as plt
 ```
 
-A note about imports:
-Notice how we imported things a few different ways?
-// TODO: Describe why using this as a reference: https://www.codingem.com/python-difference-between-import-and-from-import/
-
-            
 I'm saving the image I want to work with to my working directory in Python, so we do not have to reference its full address when uploading. Because I shamelessly capitalize on any opportunity to show off my adorable dog Bomber (aka BomberDog), I'm going to use one of my favourite photos of him looking too cool on top of "his" Jeep during one of our camping adventures.
 
 ```ruby
