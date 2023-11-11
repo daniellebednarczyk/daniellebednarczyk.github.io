@@ -116,32 +116,29 @@ The aim of the Hypothesis Test is to look for evidence to support or reject the 
 
 In a Hypothesis Test, before we collect any data or run any numbers, we specify an Acceptance Criteria. This is a p-value threshold at which we’ll decide to reject or support the null hypothesis. We might ask ourselves, "If the null hypothesis is really true, how likely is it to get the results we observe by random chance?" Think of the p-value threshold as a line we draw in the sand. If the p-value is below this threshold, it suggests that the observed result is quite unusual, and it gives us a reason to reconsider our null hypothesis.
 
+Conventionally, we set our Acceptance Criteria to 0.05 - but this does not have to be the case. If we need to be more confident that something did not occur through chance alone, we could lower this value down to something much smaller, meaning that we only come to the conclusion that the outcome was special or rare if it’s extremely rare.
 
-"if I was to run this test many many times, what proportion of those times would I want to see different results come out, in order to feel comfortable, or confident that my results are not just some unusual occurrence"
-
-Conventionally, we set our Acceptance Criteria to 0.05 - but this does not have to be the case.  If we need to be more confident that something did not occur through chance alone, we could lower this value down to something much smaller, meaning that we only come to the conclusion that the outcome was special or rare if it’s extremely rare.
-
-So to summarise, in a Hypothesis Test, we test the Null Hypothesis using a p-value and then decide it’s fate based on the Acceptance Criteria.
+To summarise: in a Hypothesis Test we test the Null Hypothesis using a p-value, and then decide its fate (accepted or rejected) based on the Acceptance Criteria.
 
 <br>
 **Types Of Hypothesis Test**
 
-There are many different types of Hypothesis Tests, each of which is appropriate for use in differing scenarios - depending on a) the type of data that you’re looking to test and b) the question that you’re asking of that data.
+There are many different types of Hypothesis Tests, each appropriate for use in different scenarios - depending on a) the type of data that you're looking to test and b) the question you’re asking of that data.
 
-In the case of our task here, where we are looking to understand the difference in sign-up *rate* between two groups - we will utilise the Chi-Square Test For Independence.
+In the case of our task here, since we are looking to understand the difference in sign-up *rate* between two groups, we will utilise the Chi-Square Test For Independence.
 
 <br>
 #### Chi-Square Test For Independence
 
 The Chi-Square Test For Independence is a type of Hypothesis Test that assumes observed frequencies for categorical variables will match the expected frequencies.
 
-The *assumption* is the Null Hypothesis, which as discussed above is always the viewpoint that the two groups will be equal.  With the Chi-Square Test For Independence we look to calculate a statistic which, based on the specified Acceptance Criteria will mean we either reject or support this initial assumption.
+The *assumption* is the Null Hypothesis, which as discussed above is always the viewpoint that the two groups will be equal. With the Chi-Square Test For Independence we look to calculate a statistic which, based on the specified Acceptance Criteria, will mean we either reject or support this initial assumption.
 
 The *observed frequencies* are the true values that we’ve seen.
 
 The *expected frequencies* are essentially what we would *expect* to see based on all of the data.
 
-**Note:** Another option when comparing "rates" is a test known as the *Z-Test For Proportions*.  While, we could absolutely use this test here, we have chosen the Chi-Square Test For Independence because:
+**Note:** Another option when comparing "rates" is a test known as the *Z-Test For Proportions*. While, we could absolutely use this test here, we have chosen the Chi-Square Test For Independence because:
 
 * The resulting test statistic for both tests will be the same
 * The Chi-Square Test can be represented using 2x2 tables of data - meaning it can be easier to explain to stakeholders
@@ -154,7 +151,7 @@ ___
 
 In the client database, we have a *campaign_data* table which shows us which customers received each type of "Delivery Club" mailer, which customers were in the control group, and which customers joined the club as a result.
 
-For this task, we are looking to find evidence that the Delivery Club signup rate for customers that received "Mailer 1" (low cost) was different to those who received "Mailer 2" (high cost) and thus from the *campaign_data* table we will just extract customers in those two groups, and exclude customers who were in the control group.
+For this task, we are looking to find evidence that the Delivery Club signup rate for customers that received "Mailer 1" (low cost) was different to those who received "Mailer 2" (high cost). So we will just extract customers in those two groups from the *campaign_data* table, excluding customers who were in the control group.
 
 In the code below, we:
 
@@ -218,8 +215,8 @@ In the code below we code these in explcitly & clearly so we can utilise them la
 ```python
 
 # specify hypotheses & acceptance criteria for test
-null_hypothesis = "There is no relationship between mailer type and signup rate.  They are independent"
-alternate_hypothesis = "There is a relationship between mailer type and signup rate.  They are not independent"
+null_hypothesis = "There is no relationship between mailer type and signup rate. They are independent"
+alternate_hypothesis = "There is a relationship between mailer type and signup rate. They are not independent"
 acceptance_criteria = 0.05
 
 ```
@@ -227,7 +224,7 @@ acceptance_criteria = 0.05
 <br>
 #### Calculate Observed Frequencies & Expected Frequencies
 
-As mentioned in the section above, in a Chi-Square Test For Independence, the *observed frequencies* are the true values that we’ve seen, in other words the actual rates per group in the data itself.  The *expected frequencies* are what we would *expect* to see based on *all* of the data combined.
+As mentioned in the section above, in a Chi-Square Test For Independence the *observed frequencies* are the true values that we’ve seen - in other words the actual rates per group in the data itself. The *expected frequencies* are what we would *expect* to see based on *all* of the data combined.
 
 The below code:
 
@@ -266,16 +263,16 @@ print(critical_value)
 
 ```
 <br>
-Based upon our observed values, we can give this all some context with the sign-up rate of each group.  We get:
+Based upon our observed values, we can give this all some context with the sign-up rate of each group. We get:
 
 * Mailer 1 (Low Cost): **32.8%** signup rate
 * Mailer 2 (High Cost): **37.8%** signup rate
 
-From this, we can see that the higher cost mailer does lead to a higher signup rate.  The results from our Chi-Square Test will provide us more information about how confident we can be that this difference is robust, or if it might have occured by chance.
+From this, we see that the higher-cost mailer does lead to a higher signup rate. The results from our Chi-Square Test will provide us more information about how confident we can be that this difference is robust, or if it might have occured by chance.
 
-We have a Chi-Square Statistic of **1.94** and a p-value of **0.16**.  The critical value for our specified Acceptance Criteria of 0.05 is **3.84**
+We have a Chi-Square Statistic of **1.94** and a p-value of **0.16**. The critical value for our specified Acceptance Criteria of 0.05 is **3.84**
 
-**Note** When applying the Chi-Square Test above, we use the parameter *correction = False* which means we are applying what is known as the *Yate's Correction* which is applied when your Degrees of Freedom is equal to one.  This correction helps to prevent overestimation of statistical signficance in this case.
+**Note** When applying the Chi-Square Test above, we use the parameter *correction = False*. This means we are applying what is known as the *Yate's Correction*, which is applied when your Degrees of Freedom is equal to one. This correction helps to prevent overestimation of statistical signficance in this case.
 
 ___
 
