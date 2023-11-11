@@ -114,7 +114,10 @@ The aim of the Hypothesis Test is to look for evidence to support or reject the 
 <br>
 **The Acceptance Criteria**
 
-In a Hypothesis Test, before we collect any data or run any numbers - we specify an Acceptance Criteria.  This is a p-value threshold at which we’ll decide to reject or support the null hypothesis.  It is essentially a line we draw in the sand saying "if I was to run this test many many times, what proportion of those times would I want to see different results come out, in order to feel comfortable, or confident that my results are not just some unusual occurrence"
+In a Hypothesis Test, before we collect any data or run any numbers, we specify an Acceptance Criteria. This is a p-value threshold at which we’ll decide to reject or support the null hypothesis. We might ask ourselves, "If the null hypothesis is really true, how likely is it to get the results we observe by random chance?" Think of the p-value threshold as a line we draw in the sand. If the p-value is below this threshold, it suggests that the observed result is quite unusual, and it gives us a reason to reconsider our null hypothesis.
+
+
+"if I was to run this test many many times, what proportion of those times would I want to see different results come out, in order to feel comfortable, or confident that my results are not just some unusual occurrence"
 
 Conventionally, we set our Acceptance Criteria to 0.05 - but this does not have to be the case.  If we need to be more confident that something did not occur through chance alone, we could lower this value down to something much smaller, meaning that we only come to the conclusion that the outcome was special or rare if it’s extremely rare.
 
