@@ -76,9 +76,9 @@ In other words - while we saw that the higher cost Mailer 2 had a higher signup 
 
 Without running this Hypothesis Test, the client may have concluded that they should always go with higher cost mailers - and from what we've seen in this test, that may not be the optimal decision. It would result in them spending more, but not *necessarily* gaining any extra revenue as a result.
 
-Our results here also do not say that there *definitely isn't a difference between the two mailers* - we are only advising that we should not make any rigid conclusions *at this point*.  
+Our results here do not say that there *definitely isn't a difference between the two mailers* - we are only advising that we should not make any rigid conclusions *at this point*.  
 
-Running more A/B Tests like this, gathering more data, and then re-running this test may provide us, and the client more insight!
+Running more A/B Tests like this, gathering more data, and then re-running this test may provide us and the client more insight!
 
 <br>
 <br>
@@ -92,24 +92,24 @@ ___
 
 An A/B Test can be described as a randomised experiment containing two groups, A & B, that receive different experiences. Within an A/B Test, we look to understand and measure the response of each group - and the information from this helps drive future business decisions.
 
-Application of A/B testing can range from testing different online ad strategies, different email subject lines when contacting customers, or testing the effect of mailing customers a coupon, vs a control group.  Companies like Amazon are running these tests in an almost never-ending cycle, testing new website features on randomised groups of customers...all with the aim of finding what works best so they can stay ahead of their competition.  Reportedly, Netflix will even test different images for the same movie or show, to different segments of their customer base to see if certain images pull more viewers in.
+Application of A/B testing can range from testing different online ad strategies, different email subject lines when contacting customers, or testing the effect of mailing customers a coupon, vs a control group. Companies like Amazon are running these tests in an almost never-ending cycle, testing new website features on randomized groups of customers with the aim of finding what works best so they can stay ahead of their competition. Reportedly, Netflix will even test different images for the same movie or show, to different segments of their customer base to see if certain images pull more viewers in.
 
 <br>
 #### Hypothesis Testing
 
-A Hypothesis Test is used to assess the plausibility, or likelihood of an assumed viewpoint based on sample data - in other words, a it helps us assess whether a certain view we have about some data is likely to be true or not.
+A Hypothesis Test is used to assess the plausibility, or likelihood of an assumed viewpoint based on sample data. In other words, it helps us assess whether a certain view we have about some data is likely to be true or not.
 
-There are many different scenarios we can run Hypothesis Tests on, and they all have slightly different techniques and formulas - however they all have some shared, fundamental steps & logic that underpin how they work.
+There are many different scenarios on which we can run Hypothesis Tests, and they all have slightly different techniques and formulas - however they all have some shared, fundamental steps and logic that underpin how they work.
 
 <br>
 **The Null Hypothesis**
 
-In any Hypothesis Test, we start with the Null Hypothesis. The Null Hypothesis is where we state our initial viewpoint, and in statistics, and specifically Hypothesis Testing, our initial viewpoint is always that the result is purely by chance or that there is no relationship or association between two outcomes or groups
+In any Hypothesis Test, we start with the Null Hypothesis. The Null Hypothesis is where we state our initial viewpoint, and in statistics - and specifically Hypothesis Testing - our initial viewpoint is always that the result is purely by chance, or that there is no relationship or association between two outcomes or groups.
 
 <br>
 **The Alternate Hypothesis**
 
-The aim of the Hypothesis Test is to look for evidence to support or reject the Null Hypothesis.  If we reject the Null Hypothesis, that would mean we’d be supporting the Alternate Hypothesis.  The Alternate Hypothesis is essentially the opposite viewpoint to the Null Hypothesis - that the result is *not* by chance, or that there *is* a relationship between two outcomes or groups
+The aim of the Hypothesis Test is to look for evidence to support or reject the Null Hypothesis.  If we reject the Null Hypothesis, then we’d be supporting the Alternate Hypothesis. The Alternate Hypothesis is essentially the opposite viewpoint to the Null Hypothesis - that the result is *not* by chance, or that there *is* a relationship between two outcomes or groups.
 
 <br>
 **The Acceptance Criteria**
