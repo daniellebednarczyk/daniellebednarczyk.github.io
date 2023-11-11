@@ -5,7 +5,7 @@ image: "/posts/ab-testing-title-img.png"
 tags: [AB Testing, Hypothesis Testing, Chi-Square, Python]
 ---
 
-In this project we apply Chi-Square Test For Independence (a Hypothesis Test) to assess the performance of two types of mailers that were sent out to promote a new service! 
+In this project we apply Chi-Square Test For Independence (a Hypothesis Test) to assess the performance of two types of mailers that were sent out to promote a new service. 
 
 # Table of contents
 
@@ -25,17 +25,17 @@ ___
 
 ### Context <a name="overview-context"></a>
 
-Earlier in the year, our client, a grocery retailer, ran a campaign to promote their new "Delivery Club" - an initiative that costs a customer $100 per year for membership, but offers free grocery deliveries rather than the normal cost of $10 per delivery.
+Earlier in the year, our client, a grocery retailer, ran a campaign to promote their new "Delivery Club" - an initiative that costs a customer $100 per year for membership, but offers free grocery deliveries (rather than the normal cost of $10 per delivery).
 
-For the campaign promoting the club, customers were put randomly into three groups - the first group received a low quality, low cost mailer, the second group received a high quality, high cost mailer, and the third group were a control group, receiving no mailer at all.
+For the campaign promoting the club, customers were randomly assigned to three groups. The first group received a low-quality, low-cost mailer, the second group received a high-quality, high-cost mailer, and the third group were a control group, receiving no mailer at all.
 
-The client knows that customers who were contacted, signed up for the Delivery Club at a far higher rate than the control group, but now want to understand if there is a significant difference in signup rate between the cheap mailer and the expensive mailer.  This will allow them to make more informed decisions in the future, with the overall aim of optimising campaign ROI!
+The client knows that customers who received mailers signed up for the Delivery Club at a far higher rate than the control group, but now want to understand if there is a significant difference in signup rate between the cheap mailer and the expensive mailer.  This will allow them to make more informed decisions in the future, with the overall aim of optimising campaign ROI.
 
 <br>
 <br>
 ### Actions <a name="overview-actions"></a>
 
-For this test, as it is focused on comparing the *rates* of two groups - we applied the Chi-Square Test For Independence.  Full details of this test can be found in the dedicated section below.
+As this test focused on comparing the *rates* of two groups, we applied the *Chi-Square Test For Independence*.  Full details of this test can be found in the dedicated section below.
 
 **Note:** Another option when comparing "rates" is a test known as the *Z-Test For Proportions*.  While, we could absolutely use this test here, we have chosen the Chi-Square Test For Independence because:
 
@@ -63,7 +63,7 @@ Based upon our observed values, we can give this all some context with the sign-
 * Mailer 1 (Low Cost): **32.8%** signup rate
 * Mailer 2 (High Cost): **37.8%** signup rate
 
-However, the Chi-Square Test gives us the following statistics:
+The Chi-Square Test gives us the following statistics:
 
 * Chi-Square Statistic: **1.94**
 * p-value: **0.16**
@@ -72,9 +72,9 @@ The Critical Value for our specified Acceptance Criteria of 0.05 is **3.84**
 
 Based upon these statistics, we retain the null hypothesis, and conclude that there is no relationship between mailer type and signup rate.
 
-In other words - while we saw that the higher cost Mailer 2 had a higher signup rate (37.8%) than the lower cost Mailer 1 (32.8%) it appears that this difference is not significant, at least at our Acceptance Criteria of 0.05.
+In other words - while we saw that the higher cost Mailer 2 had a higher signup rate (37.8%) than the lower cost Mailer 1 (32.8%), it appears that this difference is not significant, at least at our Acceptance Criteria of 0.05.
 
-Without running this Hypothesis Test, the client may have concluded that they should always look to go with higher cost mailers - and from what we've seen in this test, that may not be a great decision.  It would result in them spending more, but not *necessarily* gaining any extra revenue as a result
+Without running this Hypothesis Test, the client may have concluded that they should always go with higher cost mailers - and from what we've seen in this test, that may not be the optimal decision. It would result in them spending more, but not *necessarily* gaining any extra revenue as a result.
 
 Our results here also do not say that there *definitely isn't a difference between the two mailers* - we are only advising that we should not make any rigid conclusions *at this point*.  
 
